@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* CSS GERAL */
+/* CSS GERAL */
+/* CSS GERAL */
+/* CSS GERAL */
+/* CSS GERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+:root{
+    --dark:#222;
+    --principal: #111;
+    --letter: #cacaca;
+    --linkh: #b60f0f;
+    --selected: #610101; 
+}
+
+body{
+    background-color: var(--dark);
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.cont-geral {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+}
+
+.cont-secundario {
+    height: 100vh;
+    width: calc(100vw - 90px);
+    display: flex;
+}
+
+hr.separ {
+    border-top: 1px solid #727272;
+    width: 96%;
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/* CSS DO CONFIG */
+/* CSS DO CONFIG */
+/* CSS DO CONFIG */
+/* CSS DO CONFIG */
+/* CSS DO CONFIG */
+
+.config {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.configsep1 {
+    height: 100%;
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 30px;
+}
+
+.configsep1 h2 {
+    font-size: 40px;
+    color: var(--letter);
+}
+
+.configsep1 h4 {
+    font-size: 20px;
+    color: var(--letter);
+}
+
+
+.configsep1 i {
+    width: fit-content;
+}
+
+.configsep2 {
+    height: 100%;
+    width: 47%;
+}
+
+/* CSS DA NAVEGAÇÃO */
+/* CSS DA NAVEGAÇÃO */
+/* CSS DA NAVEGAÇÃO */
+/* CSS DA NAVEGAÇÃO */
+/* CSS DA NAVEGAÇÃO */
+
+nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: calc(100% + auto);
+    left: 0;
+    background-color: var(--dark);
+    box-shadow: 2px 0px 20px var(--principal);
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+}
+
+nav a {
+    position: relative;
+    color: var(--letter);
+    font-size: 14px;
+    display: flex;
+    width: 260px;
+    height: 65px;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px 10px 0px 10px;
+    transition: all 0.3s ease;
+}
+
+nav i {
+    display: flex;
+    align-items: center;
+}
+
+.fas {
+    width: 70px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+a:hover {
+    background: var(--linkh);
+    color: var(--letter);
+}
+
+.selected {
+    background: var(--selected);
+    color: var(--letter);
+}
+
+nav:hover {
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+.nav-item button{
+    display: none;
+}
+
+.logo {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--letter);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--letter);
+}
+
+/* CSS DO DROPDOWN */
+/* CSS DO DROPDOWN */
+/* CSS DO DROPDOWN */
+/* CSS DO DROPDOWN */
+/* CSS DO DROPDOWN */
+
+.add-dropdown {
+    position: relative;
+}
+
+.dropdown {
+    background-color: var(--linkh);
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 260px;
+    border-radius: 0px 0px 10px 10px;
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: height 0.8s;
+}
+
+.add {
+    padding: 0px;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: var(--selected);
+    color: var(--letter);
+    height: 0px;
+    font-size: 0px;
+}
+
+.add .fas {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.add:hover {
+    border: 2px solid var(--selected);
+}
+
+.addbtn {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.addbtn:hover + .add-dropdown .dropdown {
+    height: auto;
+    padding: 10px;
+}
+
+.addbtn:hover + .add-dropdown .add {
+    height: 65px;
+    padding: 16px 14px;
+    height: 65px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.add-dropdown:hover .dropdown {
+    height: auto;
+    padding: 10px;
+}
+
+.add-dropdown:hover .add {
+    height: 65px;
+    padding: 16px 14px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.ittbtn:hover .addbtn {
+    background-color: var(--linkh); /* Altere para a cor desejada */
+}
+
+
+/* CSS DO EVENTOS */
+/* CSS DO EVENTOS */
+/* CSS DO EVENTOS */
+/* CSS DO EVENTOS */
+/* CSS DO EVENTOS */
+
+.cont-secundario-pricipal {
+    height: 100vh;
+    width: calc(100vw - 90px);
+    overflow-y: scroll;
+}
+
+.eventosep {
+    width: 100%;
+    height: calc(100% - 35%);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.conteventos {
+    background-color: var(--selected);
+    width: 29%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    box-shadow: 0px 0px 10px var(--principal);
+}
+
+.contcategorias {
+    background-color: var(--selected);
+    width: 29%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    box-shadow: 0px 0px 10px var(--principal);
+}
+
+.contatletas {
+    background-color: var(--selected);
+    width: 29%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    box-shadow: 0px 0px 10px var(--principal);
+}
+
+.subeventos {
+    background-color: var(--principal);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    overflow-y: scroll;
+}
+
+.subeventos p {
+    color: var(--letter);
+}
+
+.subcategorias {
+    background-color: var(--principal);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    overflow-y: scroll;
+}
+
+.subcategorias p {
+    color: var(--letter);
+}
+
+.subatletas {
+    background-color: var(--principal);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    overflow-y: scroll;
+}
+
+.subatletas p {
+    color: var(--letter);
+}
+
+.difeventos-sep-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+    padding: 30px;
+    color: var(--letter);
+}
+
+.difeventos-sep-1 .fas {
+    width: fit-content;
+}
+
+.sepeventview {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.eventview {
+    color: var(--letter);
+    width: auto;
+    height: 65px;
+    width: 80%;
+    background-color: var(--selected);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    transition: all 0.5s;
+    justify-content: space-between;
+}
+
+.subcategorias h4 {
+    background-color: var(--selected);
+    color: var(--letter);
+    height: 65px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.evecategorias {
+    background-color: var(--selected);
+    color: var(--letter);
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.play {
+    width: 20%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    color: var(--letter);
+    background-color: var(--selected);
+}
+
+.play:hover {
+    color: var(--principal);
+    transition: all 0.5s;
+}
+
+.play.disabled {
+    color: #6c757d; /* Cor de texto desabilitado */
+    cursor: not-allowed; /* Cursor de não permitido */
+    pointer-events: none; /* Desabilita qualquer interação com o link */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.play.disabled:hover {
+    color: #6c757d; /* Mantém a mesma cor ao passar o mouse */
+}
+
+/* CSS DA CATEGORIA */
+/* CSS DA CATEGORIA */
+/* CSS DA CATEGORIA */
+/* CSS DA CATEGORIA */
+/* CSS DA CATEGORIA */
+
+.categoriaview {
+    color: var(--letter);
+    width: 100%;
+    height: 65px;
+    background-color: var(--selected);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.catinfo {
+    background-color: var(--selected);
+    color: var(--letter);
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.catinfo h4 {
+    height: auto;
+    padding: 0px;
+}
+
+/* CSS DOS ATLETAS */
+/* CSS DOS ATLETAS */
+/* CSS DOS ATLETAS */
+/* CSS DOS ATLETAS */
+/* CSS DOS ATLETAS */
+
+.atletasview {
+    color: var(--letter);
+    width: 100%;
+    height: 65px;
+    background-color: var(--selected);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.atletasview button {
+    width: 60px;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--selected);
+    color: var(--letter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.atletasview button:hover {
+    background-color: var(--linkh);
+}
+
+/* CSS DOS GRUPOS */
+/* CSS DOS GRUPOS */
+/* CSS DOS GRUPOS */
+/* CSS DOS GRUPOS */
+/* CSS DOS GRUPOS */
+
+.subcategoriasgp {
+    background-color: var(--principal);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    overflow-y: scroll;
+}
+
+.subgrupos {
+    background-color: var(--principal);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    overflow-y: scroll;
+}
+
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed;
+    z-index: 1; /* Fica em cima de outros conteúdos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgb(0,0,0); /* Cor de fundo */
+    background-color: rgba(0,0,0,0.4); /* Com opacidade */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: #d3d3d3;
+    color: #a9a9a9;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+@media (max-width:785px) {
+
+    body {
+        max-height: none;
+        flex-direction: column;
+    }
+
+    .logo {
+        display: block;
+        color: var(--letter);
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .dife {
+        display: none;
+    }
+
+    nav {
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px;
+    }
+
+    nav:hover {
+        width: 100%;
+        height: 70px;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--dark);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+
+    .nav-item{
+        list-style-type: none;
+    }
+
+    .nav-item button {
+        position: relative;
+        color: var(--letter);
+        font-size: 14px;
+        display: flex;
+        width: 260px;
+        height: 65px;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border-radius: 10px 10px 0px 10px;
+        transition: all 0.3s ease;
+        border: none;
+        background-color: var(--dark);
+    }
+
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
